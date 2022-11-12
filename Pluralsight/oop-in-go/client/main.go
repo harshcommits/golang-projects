@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"golang-projects/Pluralsight/oop-in-go/payment"
+	"oop-in-go/payment"
 )
 
 func main() {
