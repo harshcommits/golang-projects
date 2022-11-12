@@ -69,3 +69,13 @@ func (c *CreditCard) SetExpirationDate(month, year int) error {
 func (c *CreditCard) SecurityCode() int {
 	return c.securityCode
 }
+
+func (c *CreditCard) SetSecurityCode(value int) {
+	if value < 100 || value > 999 {
+		// return errors.New("")
+	}
+}
+
+func (c *CreditCard) AvailableCredit() float32 {
+	return 5000. // this can come from a web service; client doesn't know or care
+}
