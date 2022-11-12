@@ -2,6 +2,8 @@ package payment
 
 import (
 	"errors"
+	"regexp"
+	"time"
 )
 
 type CreditCard struct {
@@ -24,11 +26,46 @@ func CreateCreditAccount(ownerName, cardNumber string, expirationMonth, expirati
 }
 
 func (c *CreditCard) OwnerName() string {
-	return c.OwnerName
+	return c.ownerName
 }
 
-func (c *CreditCard) SetOwnerName(value string) string {
+func (c *CreditCard) SetOwnerName(value string) error {
 	if len(value) == 0 {
-		return errors.new("Invalid owner name provided")
+		return errors.New("Invalid owner name provided")
 	}
+
+	c.ownerName = value
+	return nil
+}
+
+func (c *CreditCard) CardNumber() string {
+	return c.cardNumber
+}
+
+var cardNumberPattern = regexp.MustCompile("\\d{4}-\\d{4}-\\d{4}-\\d{4}")
+
+func (c *CreditCard) SetCardNumber(value string) error {
+	if !cardNumberPattern.Match([]byte(value)) {
+		return errors.New("Invalid credit card format")
+	}
+	c.cardNumber = value
+	return nil
+}
+
+func (c *CreditCard) ExpirationDate() (int, int) {
+	return c.expirationMonth, c.expirationYear
+}
+
+func (c *CreditCard) SetExpirationDate(month, year int) error {
+	now := time.Now()
+	if year < now.Year() ||
+		(year == now.Year() && time.Month(month) < now.Month()) {
+		return errors.New("Expiration date must lie in the future")
+	}
+	c.expirationMonth, c.expirationYear = month, year
+	return nil
+}
+
+func (c *CreditCard) SecurityCode() int {
+	return c.securityCode
 }
