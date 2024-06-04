@@ -13,7 +13,7 @@ func main() {
 
 	//colors = append(colors[1:len(colors)])
 	//fmt.Println(colors)
-	colors = append(colors[:len(colors)-1])
+	colors = append(colors[:len(colors)-1]) // prints up until the last value; skips the final ones
 	fmt.Println(colors)
 
 	numbers := make([]int, 6) //creates a slice of 6 values; unless declared, each value is 0

@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	rand.Seed(time.Now().Unix())
+	rand.New(rand.NewSource(time.Now().Unix()))
 	dow := rand.Intn(7) + 1 //sets ceiling to 7
 	fmt.Println("Day", dow)
 
