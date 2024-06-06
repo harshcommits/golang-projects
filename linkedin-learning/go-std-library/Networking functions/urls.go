@@ -19,7 +19,7 @@ func main() {
 
 	//extract query in a values struct
 	vals := result.Query()
-	fmt.Println(vals["username"])
+	fmt.Println("the vals parameter is", vals["username"])
 
 	//create URL from components
 	newurl := &url.URL{
@@ -37,7 +37,7 @@ func main() {
 	fmt.Println(s)
 
 	//create new values struct and encode it as query string
-	newvals := url.Values{}
+	newvals := url.Values{} // struct declaration for the RawQuery values
 	newvals.Add("x", "100")
 	newvals.Add("z", "somestr")
 
