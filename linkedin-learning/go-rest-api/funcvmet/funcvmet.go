@@ -7,7 +7,7 @@ type Dimensions struct {
 }
 
 // method definition
-func (d Dimensions) Area() int {
+func (d *Dimensions) Area() int {
 	return d.Length * d.Width
 }
 

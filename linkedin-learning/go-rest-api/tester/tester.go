@@ -13,7 +13,9 @@ func main() {
 	//done via receiver methods
 	d := funcvmet.Dimensions{Length: 1, Width: 2, Height: 4} // can be done without keys; shows unkeyed composites warning tho
 	fmt.Println(d.Area())
+	fmt.Println(d)
 	fmt.Println(d.Volume())
+	fmt.Println(d)
 
 	// done via functions
 	area, vol := funcvmet.Values(1, 2, 4)
