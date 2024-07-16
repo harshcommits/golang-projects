@@ -21,3 +21,8 @@ The parentheses at the end are there for passing values for the parameters defin
     }("hello")
 
 ```
+
+## Generic observations
+
+Pointer receiver -> in case you want to change the value of the function after the method scope
+Value receiver -> in case you want to change the value only during the functions scope
