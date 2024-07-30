@@ -31,11 +31,20 @@ func main() {
 
 	time.Sleep(1 * time.Second)
 	fmt.Println("Main 2 ready")
-	for {
-		greeting, ok := <-ch
-		if !ok {
-			return
-		}
+
+	// iterating through channels with fix for avoiding empty loops and check if the channel is closed
+	// for {
+	// 	greeting, ok := <-ch // check with the ok value if the channel is closed
+	// 	if !ok {
+	// 		return
+	// 	}
+
+	// 	time.Sleep(500 * time.Millisecond)
+	// 	fmt.Println("Greeting received: ", greeting)
+	// }
+
+	// better way to iterate through channels
+	for greeting := range ch {
 		time.Sleep(500 * time.Millisecond)
 		fmt.Println("Greeting received: ", greeting)
 	}
@@ -47,7 +56,7 @@ func greet2(ch chan<- string) {
 	for _, g := range greetings {
 		ch <- g
 	}
-	close(ch)
+	close(ch) // close channel to avoid goroutine locks
 	fmt.Println("Greeter completed")
 }
 
