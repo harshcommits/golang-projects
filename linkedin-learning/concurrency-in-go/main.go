@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"sync"
 	"time"
+
+	"github.com/harshcommits/golang-projects/linkedin-learning/concurrency-in-go/server"
 )
 
 var greetings = []string{"Hello", "Ciao", "Namaste"}
@@ -48,6 +50,9 @@ func main() {
 		time.Sleep(500 * time.Millisecond)
 		fmt.Println("Greeting received: ", greeting)
 	}
+
+	// server.Select_use()  // runs both channels, but with infinite loop problem
+	server.Select_use2() // runs both channels, but without infinite loop problem
 
 }
 
