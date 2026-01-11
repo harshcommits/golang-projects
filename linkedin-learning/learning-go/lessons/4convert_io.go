@@ -1,4 +1,4 @@
-package main
+package lessons
 
 import (
 	"bufio"
@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-func main() {
+func ConvertIO() {
 
 	reader := bufio.NewReader(os.Stdin)
 	fmt.Println("Enter text: ")

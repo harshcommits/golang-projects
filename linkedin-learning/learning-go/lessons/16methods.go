@@ -1,18 +1,18 @@
-package main
+package lessons
 
 import (
 	"fmt"
 )
 
-type Dog struct {
+type AnotherDog struct {
 	Breed  string
 	Weight int
 	Sound  string
 }
 
-func main() {
+func Methods() {
 
-	poodle := Dog{"Poodle", 10, "Woof!"}
+	poodle := AnotherDog{"Poodle", 10, "Woof!"}
 	fmt.Printf("%+v\n", poodle)
 
 	poodle.Speak()
@@ -22,11 +22,11 @@ func main() {
 
 }
 
-func (d Dog) Speak() { //d is receiver, where d is an instance of Dog struct and can be called in the method itself
+func (d AnotherDog) Speak() { //d is receiver, where d is an instance of AnotherDog struct and can be called in the method itself
 	fmt.Println(d.Sound)
 }
 
-func (d Dog) SpeakThreeTimes() {
+func (d AnotherDog) SpeakThreeTimes() {
 	/*
 		d.Sound = fmt.Sprintf("%v %v %v", d.Sound, d.Sound, d.Sound)
 		fmt.Println(d.Sound)

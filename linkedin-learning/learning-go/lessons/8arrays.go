@@ -1,10 +1,10 @@
-package main
+package lessons
 
 import (
 	"fmt"
 )
 
-func main() {
+func Arrays() {
 
 	//multi-line declaration
 	var colors [3]string

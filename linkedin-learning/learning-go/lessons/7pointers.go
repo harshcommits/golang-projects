@@ -1,10 +1,10 @@
-package main
+package lessons
 
 import (
 	"fmt"
 )
 
-func main() {
+func Pointers() {
 	anInt := 42
 	var p = &anInt //p is the address for &anInt, where the value is stored
 	fmt.Println("Value of p: ", *p)

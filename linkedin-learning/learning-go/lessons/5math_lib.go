@@ -1,11 +1,11 @@
-package main
+package lessons
 
 import (
 	"fmt"
 	"math"
 )
 
-func main() {
+func MathLib() {
 
 	i1, i2, i3 := 12, 45, 48
 	intSum := i1 + i2 + i3

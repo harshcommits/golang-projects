@@ -1,10 +1,10 @@
-package main
+package lessons
 
 import (
 	"fmt"
 )
 
-func main() {
+func ForLoop() {
 	colors := []string{"Red", "Green", "Blue"}
 	fmt.Println(colors)
 

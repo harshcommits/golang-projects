@@ -1,4 +1,4 @@
-package main
+package lessons
 
 import (
 	"fmt"
@@ -10,7 +10,7 @@ type Dog struct {
 	size   string //only accessible inside the package
 }
 
-func main() {
+func Structs() {
 
 	poodle := Dog{"Poodle", 10, "small"}
 	fmt.Println(poodle)

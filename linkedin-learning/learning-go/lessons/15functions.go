@@ -1,10 +1,10 @@
-package main
+package lessons
 
 import (
 	"fmt"
 )
 
-func main() {
+func Functions() {
 	doSomething()
 	fmt.Println(addValues(1, 2))
 	multiSum, multiCount := addAllValues(1, 23, 3)
@@ -20,7 +20,7 @@ func addValues(value1 int, value2 int) int {
 	return value1 + value2
 }
 
-//multiple values using single parameter
+// multiple values using single parameter
 func addAllValues(values ...int) (int, int) {
 	total := 0
 	for _, v := range values {

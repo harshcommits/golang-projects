@@ -1,4 +1,4 @@
-package main
+package lessons
 
 import (
 	"bufio"
@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func main() {
+func Inputs() {
 
 	reader := bufio.NewReader(os.Stdin)
 	fmt.Println("Enter text")

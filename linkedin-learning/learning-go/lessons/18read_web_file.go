@@ -1,4 +1,4 @@
-package main
+package lessons
 
 import (
 	"fmt"
@@ -6,11 +6,11 @@ import (
 	"net/http"
 )
 
-const url = "http://services.explorecalifornia.org/json/tours.php"
+const apiUrl = "http://services.explorecalifornia.org/json/tours.php"
 
-func main() {
+func ReadWebFile() {
 
-	resp, err := http.Get(url)
+	resp, err := http.Get(apiUrl)
 	if err != nil {
 		panic(err)
 	}

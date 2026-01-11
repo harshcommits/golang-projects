@@ -1,11 +1,11 @@
-package main
+package lessons
 
 import (
 	"fmt"
 	"sort"
 )
 
-func main() {
+func Maps() {
 	states := make(map[string]string) //format for maps: map[key_datatype]value_datatype; eg. map[int]string
 	fmt.Println(states)
 	states["RJ"] = "Rajasthan"

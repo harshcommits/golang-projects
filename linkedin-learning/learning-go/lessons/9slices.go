@@ -1,11 +1,11 @@
-package main
+package lessons
 
 import (
 	"fmt"
 	"sort"
 )
 
-func main() {
+func Slices() {
 	var colors = []string{"Red", "Blue", "Green"}
 	fmt.Println(colors)
 	colors = append(colors, "Purple")

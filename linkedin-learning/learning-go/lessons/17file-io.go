@@ -1,4 +1,4 @@
-package main
+package lessons
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func main() {
+func FileIO() {
 
 	content := "Hello from Go!"
 	file, err := os.Create("./fromString.txt")

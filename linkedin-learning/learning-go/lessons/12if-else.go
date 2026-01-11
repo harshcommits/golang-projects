@@ -1,10 +1,10 @@
-package main
+package lessons
 
 import (
 	"fmt"
 )
 
-func main() {
+func IfElse() {
 
 	theAnswer := 42
 	var result string

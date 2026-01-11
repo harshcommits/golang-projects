@@ -1,11 +1,11 @@
-package main
+package lessons
 
 import (
 	"fmt"
 	"time"
 )
 
-func main() {
+func DateTime() {
 
 	n := time.Now()
 	fmt.Println("I ran this at: ", n)

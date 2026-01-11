@@ -1,4 +1,4 @@
-package main
+package lessons
 
 import (
 	"encoding/json"
@@ -10,7 +10,7 @@ import (
 
 const url = "http://services.explorecalifornia.org/json/tours.php"
 
-func main() {
+func JSON() {
 
 	resp, err := http.Get(url)
 	if err != nil {

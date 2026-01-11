@@ -1,4 +1,4 @@
-package main
+package lessons
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func main() {
+func Switch() {
 	rand.New(rand.NewSource(time.Now().Unix()))
 	dow := rand.Intn(7) + 1 //sets ceiling to 7
 	fmt.Println("Day", dow)

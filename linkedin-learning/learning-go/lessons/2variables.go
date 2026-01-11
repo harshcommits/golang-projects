@@ -1,4 +1,4 @@
-package main
+package lessons
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 
 const aConst int = 64
 
-func main() {
+func Variables() {
 	var aString string = "This is Golang on Linux"
 	fmt.Println(aString)
 	fmt.Printf("The variable type is %T\n", aString) //%T gives the type of variable; string in this case
